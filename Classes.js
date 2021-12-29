@@ -6,6 +6,7 @@
  * - birthYear: Number
  * - interests: [String]
  *
+ *
  * 2. Add the constructor that initializes all properties except the interests array should be empty by default
  *
  * 3. Add the following methods
@@ -16,9 +17,37 @@
  * + addInterest(newInterest), that takes  a string of a new interest, and adds it to the interest array, and returns back the array
  * after you are done with the class, create at least 3 objects of type Actor of your favorite actors
  */
+
+//Answer 1: (1000 Points ⭐️)
 class Person {
-  // continue the code here
+  //Answer 2 ---------------
+  constructor(firstName, lastName, gender, birthYear, interests) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.gender = gender;
+    this.birthYear = birthYear;
+    this.interests = [];
+  }
+  //Answer 3 ---------------
+  //---EXAMPLE---sayHello = () => console.log(`Hi, I'm ${this.name}`);
+
+  printName = () => {
+    console.log(this.firstName, this.lastName);
+
+    calculateAge = (currentYear) => {
+      return currentYear - this.birthYear;
+    };
+  };
+  // addInterest = () => {}
 }
+
+const person1 = new Person("hamed", "alnouri", "male", 1992, ["guitar", "gym"]);
+const person2 = new Person("ripley", "hyde", "male", 1992, [
+  "reading",
+  "movies",
+]);
+
+// person1.printName();
 
 /** (Question 2): (15000 Points)
  * 1. Write a class `Movie`, give it the following properties
